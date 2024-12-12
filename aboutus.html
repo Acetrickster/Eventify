@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .m {
+            text-align: center; /* Center-align logos */
+            margin-bottom: 20px;
+        }
+
+        /* Shared styles for social media logos */
+        .social-logo {
+            width: 50px;
+            margin: 0 15px; /* Add space between logos */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover glow effect for all logos */
+        .social-logo:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glowing shadow effect */
+        }
+    </style>
+</head>
+
+<body class="bg-violet-950 grid place-content-center h-screen">
+    <h1 class="text-white text-4xl m-5 font-bold">TEAM AKATSUKI</h1>
+    <div class="space-y-2">
+        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+            <div>
+                <img class="h-11 w-9"
+                   src="me.jpg" alt="">
+            </div>
+            <div class="text-2xl font-medium">
+                ASHUTOSH SHAKYA
+                <p class="text-sm">Roll no. 2204850130025</p>
+            </div>
+        </div>
+        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+            <div>
+                <img class="h-10 w-9"
+                    src="beta.jpg"
+                    alt="">
+            </div>
+            <div class="text-2xl font-medium">
+                ALOK VIKRAM
+                <p class="text-sm">Roll no. 2204850130010</p>
+            </div>
+        </div>
+        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl flex items-center space-x-4">
+            <div>
+                <img class="inline rounded-full h-14 w-14 hover:drop-shadow-md" src="sonu.jpg" alt="...">
+            </div>
+            <div class="text-2xl font-medium">
+                SONU PATEL
+                <p class="text-sm">Roll no. 2204850130062</p>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5 px-4">
+    <div class="m flex size-10">
+        <!-- Instagram -->
+        <img class="social-logo rounded-1xl" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+
+        <!-- LinkedIn -->
+        <img class="social-logo rounded-1xl" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+
+        <!-- WhatsApp -->
+        <img class="social-logo rounded-2xl" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+
+        <!-- Facebook -->
+        <img class="social-logo rounded-2xl" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    </div>
+</div>
+</body>
+
+</html>

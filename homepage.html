@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eventify - Effortlessly manage your events with our all-in-one platform offering secure storage, instant notifications, and easy management tools.">
+    <title>Eventify - Organize Your Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Video styling */
+        video, .fallback-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+
+        /* Dark overlay to improve text readability */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #218838;
+        }
+
+        .features {
+            padding: 50px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .feature {
+            max-width: 30%;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        footer a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .features-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video id="background-video" autoplay >
+            <source src="arrival_animation.mp4" type="video/mp4">
+            <img src="fallback.jpg" alt="Eventify Background" class="fallback-image">
+        </video>
+        <div class="container">
+            <h1>Welcome to Eventify</h1>
+            <p>Your one-stop solution for managing events effortlessly.</p>
+            <a href="#get-started" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Why Choose Eventify?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Easy Event Management</h3>
+                <p>Plan and manage your events from start to finish with ease.</p>
+            </div>
+            <div class="feature">
+                <h3>Secure Storage</h3>
+                <p>Store all event-related information securely in the cloud.</p>
+            </div>
+            <div class="feature">
+                <h3>Instant Notifications</h3>
+                <p>Keep everyone informed with real-time email and SMS updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Eventify. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#contact">Contact Us</a></p>
+    </footer>
+    
+    <script>
+        const video = document.getElementById('background-video');
+
+        video.addEventListener('ended', function() {
+            video.pause();
+            video.currentTime = video.duration; // Keeps video at the last frame
+        });
+    </script>
+</body>
+</html>
